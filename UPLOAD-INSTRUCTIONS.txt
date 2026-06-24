@@ -1,0 +1,138 @@
+HOURGL.COM — UPLOAD INSTRUCTIONS
+==================================
+
+1. WHICH FILES GO WHERE
+------------------------
+Upload the ENTIRE contents of this folder to the ROOT of your hourgl.com
+hosting (not into a subfolder like /hourgl/ or /public/ unless your host
+specifically requires it — check your host's docs for where "root" is).
+
+Root-level files:
+  index.html
+  404.html
+  styles.css
+  script.js
+  robots.txt
+  sitemap.xml
+  site.webmanifest
+  favicon.ico
+  favicon.svg
+  apple-touch-icon.png
+
+Folder to upload as-is (keep the name "assets"):
+  assets/
+    favicon-16.png
+    favicon-32.png
+    favicon-48.png
+    icon-192-maskable.png
+    icon-512-maskable.png
+    hourgl-bottomless-hourglass-logo.png
+    hourgl-bottomless-hourglass-symbol.svg
+    hourgl-bottomless-hourglass-social-preview.png
+
+The site uses relative and root-relative paths (e.g. "styles.css",
+"/favicon.ico"), so as long as index.html and the assets folder sit
+together at the same level, everything will resolve correctly.
+
+
+2. DO YOU NEED TO CHANGE ANYTHING BEFORE UPLOADING?
+-----------------------------------------------------
+No code changes are required. Two things are worth knowing:
+
+- All canonical/OG/sitemap URLs are hardcoded to https://hourgl.com/.
+  If you ever serve this from a different domain or a subdirectory,
+  those values would need to be updated (search files for
+  "https://hourgl.com" to find every instance).
+
+- The "Visit SEBIV" and "SEBIV" links point to https://sebiv.com and
+  https://sebiv.com/bottomless-hourglass. Confirm those are still the
+  correct URLs at the time you upload.
+
+
+3. EXPECTED PUBLIC URLS
+-------------------------
+  https://hourgl.com/                         → homepage
+  https://hourgl.com/404.html                 → not-found page (most
+                                                  hosts auto-serve this
+                                                  for unmatched URLs;
+                                                  some require manual
+                                                  configuration — see #5)
+  https://hourgl.com/styles.css
+  https://hourgl.com/script.js
+  https://hourgl.com/favicon.ico
+  https://hourgl.com/favicon.svg
+  https://hourgl.com/apple-touch-icon.png
+  https://hourgl.com/site.webmanifest
+  https://hourgl.com/robots.txt
+  https://hourgl.com/sitemap.xml
+  https://hourgl.com/assets/hourgl-bottomless-hourglass-social-preview.png
+  https://hourgl.com/assets/hourgl-bottomless-hourglass-logo.png
+  https://hourgl.com/assets/hourgl-bottomless-hourglass-symbol.svg
+
+
+4. HOW TO VERIFY EVERYTHING WORKS AFTER UPLOAD
+-------------------------------------------------
+- Visit https://hourgl.com/ — the page should be dark with the purple
+  symbol centered and styled text. If you see unstyled black text on
+  a white background, styles.css did not upload to the same folder
+  as index.html.
+- View https://hourgl.com/styles.css directly in a browser — it
+  should show CSS code, not a 404.
+- View https://hourgl.com/robots.txt and https://hourgl.com/sitemap.xml
+  directly — both should display their plain-text/XML contents.
+- Check the browser tab for the purple hourglass favicon.
+- Visit a URL that doesn't exist, like https://hourgl.com/test123 —
+  you should see the custom "This page ran out of time" 404 page.
+  (If you see your host's default error page instead, see #5.)
+- Paste https://hourgl.com/ into Facebook's Sharing Debugger or
+  Twitter/X's Card Validator to confirm the social preview image and
+  description appear correctly.
+
+
+5. WHAT DNS/HOSTING STEPS CANNOT BE HANDLED BY THESE FILES
+--------------------------------------------------------------
+- Pointing hourgl.com at your hosting provider (A records, CNAME, or
+  nameserver changes) must be done in your domain registrar or DNS
+  provider's dashboard. These files don't touch DNS.
+- Enabling HTTPS/SSL for the domain is a hosting-provider setting, not
+  something controlled by these files.
+- Custom 404 handling: some static hosts (e.g. GitHub Pages, Netlify,
+  Vercel) automatically serve 404.html for unmatched routes. Others
+  require you to manually set this in a control panel or a small
+  config file specific to that host. Check your host's documentation
+  for "custom error pages" if the 404 page doesn't show up
+  automatically.
+- A www → non-www redirect (or the reverse) usually must be configured
+  through your domain or hosting provider's settings, and cannot be
+  guaranteed by HTML or these files alone. See #6 below.
+
+
+6. CANONICAL VERSION: hourgl.com vs www.hourgl.com
+-----------------------------------------------------
+hourgl.com (without "www") is the canonical version used throughout
+these files — it's what the <link rel="canonical">, Open Graph tags,
+and sitemap.xml all point to.
+
+If your hosting provider serves the site at both hourgl.com AND
+www.hourgl.com without redirecting one to the other, search engines
+may see this as duplicate content. You should configure a redirect
+from www.hourgl.com to hourgl.com (or vice versa, but stay consistent
+with what's already in these files) through your domain or hosting
+provider's settings. This is a hosting-level setting and cannot be
+done with HTML alone.
+
+
+7. WWW REDIRECT REMINDER
+--------------------------
+As noted in #5 and #6: a www redirect is a hosting/DNS-level setting.
+These files do not and cannot create that redirect on their own. Set
+it up through whichever provider manages hourgl.com's DNS or hosting.
+
+
+WHAT THIS PACKAGE DOES NOT DO
+-------------------------------
+- It does not deploy or connect to any domain, GitHub repo, or hosting
+  account. You are uploading these files yourself.
+- It does not include a real "buy now" link for apparel — the
+  Collection section intentionally shows "Coming Soon" until you
+  provide a real SEBIV product URL.

@@ -1,0 +1,23 @@
+{
+  "name": "Hourgl — The Bottomless Hourglass",
+  "short_name": "Hourgl",
+  "description": "Hourgl is the Bottomless Hourglass, an hourglass with no bottom representing urgency, growth, faith, and the reality that time is running out.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0A0A",
+  "theme_color": "#0B0A0A",
+  "icons": [
+    {
+      "src": "/assets/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
