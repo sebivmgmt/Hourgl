@@ -256,7 +256,8 @@ nav.site-nav {
   opacity: 1;
   letter-spacing: 0.02em;
   filter: blur(0px);
-  transition: opacity 1.1s ease, filter 1.1s ease, letter-spacing 1.1s ease, transform 1.1s ease;
+  display: inline-block;
+  transition: opacity 7s ease, filter 7s ease, letter-spacing 7s ease, transform 7s ease;
 }
 
 .word-transform.is-revealed .wt-fade {
