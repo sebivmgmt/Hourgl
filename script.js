@@ -1,4 +1,4 @@
-// Hourgl — minimal scroll-triggered reveal for the HOURGL/ASS word transform.
+// Hourgl — minimal scroll-triggered reveal for the HOURGLASS -> HOURGL dissolve.
 // No frameworks, no build step. Degrades safely if IntersectionObserver is unsupported.
 (function () {
   var el = document.getElementById('wordTransform');
