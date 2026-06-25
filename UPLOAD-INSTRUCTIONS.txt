@@ -11,7 +11,6 @@ Root-level files:
   index.html
   404.html
   styles.css
-  script.js
   robots.txt
   sitemap.xml
   site.webmanifest
@@ -58,7 +57,6 @@ No code changes are required. Two things are worth knowing:
                                                   some require manual
                                                   configuration — see #5)
   https://hourgl.com/styles.css
-  https://hourgl.com/script.js
   https://hourgl.com/favicon.ico
   https://hourgl.com/favicon.svg
   https://hourgl.com/apple-touch-icon.png

@@ -249,30 +249,26 @@ nav.site-nav {
   display: flex;
 }
 
+.wt-row-before {
+  font-size: clamp(20px, 4.5vw, 30px) !important;
+  color: var(--text-muted);
+  font-weight: 700 !important;
+  opacity: 0.75;
+}
+.wt-row-before .wt-keep { color: var(--text-muted); }
+
 .wt-keep { color: var(--text); }
-.wt-cut {
-  color: var(--text-dim);
-  position: relative;
-  display: inline-block;
-}
-.wt-cut::after {
-  content: "";
-  position: absolute;
-  left: -2%;
-  right: -2%;
-  top: 48%;
-  height: 3px;
-  background: var(--purple);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s ease;
-}
-.word-transform.is-revealed .wt-cut::after { transform: scaleX(1); }
-.word-transform.is-revealed .wt-cut { color: var(--text-dim); opacity: 0.45; }
 
 .wt-arrow {
   color: var(--purple-text);
   font-size: 22px;
+}
+
+.wt-arrow-down {
+  color: var(--purple-text);
+  font-size: 20px;
+  margin: 4px 0;
+  opacity: 0.7;
 }
 
 .wt-caption {
@@ -309,21 +305,42 @@ nav.site-nav {
 /* ============================================
    Symbol breakdown section
    ============================================ */
-.symbol-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 280px) 1fr;
-  gap: 48px;
+.symbol-build {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 48px 0 44px;
+  flex-wrap: wrap;
+}
+.sb-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.sb-step svg { height: 120px; width: auto; }
+.sb-result svg { height: 150px; }
+.sb-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.sb-result .sb-label { color: var(--text); font-weight: 600; }
+.sb-plus, .sb-equals {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text-dim);
+  align-self: center;
+  margin-bottom: 28px;
 }
 @media (max-width: 640px) {
-  .symbol-grid { grid-template-columns: 1fr; gap: 32px; }
+  .symbol-build { gap: 12px; }
+  .sb-step svg { height: 90px; }
+  .sb-result svg { height: 110px; }
+  .sb-plus, .sb-equals { font-size: 22px; margin-bottom: 20px; }
 }
-
-.symbol-visual {
-  display: flex;
-  justify-content: center;
-}
-.symbol-visual svg { height: 240px; width: auto; }
 
 .symbol-points {
   list-style: none;
